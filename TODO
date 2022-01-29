@@ -1,0 +1,7 @@
+http://www.google.com
+
+print(request.host_url)
+
+Fix storage and urlbuilding logic
+
+Update readme

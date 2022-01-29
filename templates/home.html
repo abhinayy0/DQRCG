@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DQRCG</title>
+  </head>
+  <body>
+    <h1>QR Generator for URL</h1>
+
+    <form action="{{ url_for('generate_qr_code', name=data) }}" method="post">
+      <label for="homepage">Add your url:</label>
+      <input type="url" id="url" name="url" /><br /><br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DQRCG</title>
+  </head>
+  <body>
+    <h2>In case you forget your unique url is :</h2>
+    <a href="{{ generated_url }}"> {{ generated_url }}</a>
+    <h3>Your generated qr code is</h3>
+    <br />
+    <br />
+    <img src="{{ url_for('send_qr_image', path=filename) }}" alt="QR Code" />
+  </body>
+</html>

@@ -35,11 +35,16 @@ Setting up the server locally.
    ```sh
    git clone https://github.com/abhinayy0/dqrcg.git
    ```
-2. Install requirements
+2. Create a virtualenv
+   ```sh
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+3. Install requirements
    ```sh
    pip install -r requirements.txt
    ```
-3. Launch using
+4. Launch using
    ```sh
    ./run.sh
    ```

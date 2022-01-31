@@ -7,7 +7,8 @@ Dynamic QR Code Generator
 DQRCG let's you generate dynamic qr code's for your website urls without any hassle. You can create dynamic urls and change your url any time you want.
 
 ![Home Screen](/screenshots/homepage.png?raw=true "Home Screen")
-![Genereate Code](/screenshots/generatedqr.png?raw=true "Generated Code")
+![Genereated Code](/screenshots/generatedqr.png?raw=true "Generated Code")
+![Validation Error](/screenshots/error.png?raw=true "Validation Error")
 
 ### Built With
 

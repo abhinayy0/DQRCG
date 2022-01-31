@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DQRCG</title>
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32"  href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}" >
-    <link rel="manifest" href="{{ url_for('static', filename='favicon_io/site.webmanifest') }}" >
-  </head>
-  <body>
-    <h1>QR Generator for URL</h1>
 
-    <form action="{{ url_for('generate_qr_code', name=data) }}" method="post">
-      <label for="homepage">Add your url:</label>
-      <input type="url" id="url" name="url" /><br /><br />
-      <input type="submit" />
-    </form>
-  </body>
+<head>
+  <title>DQRCG</title>
+
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='favicon_io/site.webmanifest') }}">
+
+  <style>
+    .error {
+      color: red
+    }
+  </style>
+</head>
+
+<body>
+  <h1>QR Generator for URL</h1>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <ul class=flashes>
+    {% for category, message in messages %}
+    <div class="{{ category }}">
+      <li>{{ message }}</li>
+    </div>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  <form action="{{ url_for('generate_qr_code', name=data) }}" method="post">
+    <label for="homepage">Add your url:</label>
+    <input type="url" id="url" name="url" /><br /><br />
+    <input type="submit" />
+  </form>
+</body>
+
 </html>

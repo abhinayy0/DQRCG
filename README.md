@@ -6,6 +6,9 @@ Dynamic QR Code Generator
 
 DQRCG let's you generate dynamic qr code's for your website urls without any hassle. You can create dynamic urls and change your url any time you want.
 
+![Home Screen](/screenshots/homepage.png?raw=true "Home Screen")
+![Genereate Code](/screenshots/generatedqr.png?raw=true "Generated Code")
+
 ### Built With
 
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/)
@@ -35,18 +38,29 @@ Setting up the server locally.
    ```sh
    git clone https://github.com/abhinayy0/dqrcg.git
    ```
-2. Create a virtualenv
+2. Create a virtualenv.
    ```sh
    python3 -m venv venv
    source venv/bin/activate
    ```
-3. Install requirements
+3. Activate the virtual environment if you're using it. Install requirements
    ```sh
    pip install -r requirements.txt
    ```
-4. Launch using
+
+4. Make sure you're in the same working directory as your run.sh before executing the command.
+
+5. For (Linux/ Mac OS) launch using 
    ```sh
    ./run.sh
+   ```
+   For windows launch using
+   ```
+   ./run.bat
+   ```
+6. Now your app should be accessible at 
+   ```
+   http://127.0.0.1:5000
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>

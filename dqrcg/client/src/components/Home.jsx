@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Form, Button, Alert, Image } from "react-bootstrap";
 import config from "../config";
 import axios from "axios";

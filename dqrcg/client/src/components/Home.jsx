@@ -1,9 +1,10 @@
-import React ,{useState} from 'react';
+import React ,{useState, useEffect} from 'react';
 import { Form , Button, Alert , Image} from 'react-bootstrap';
 
 import axios from "axios";
 
 const baseURL = "http://127.0.0.1:5000/api/qrcode";
+
 
 export default function Home(props) {
 
@@ -14,11 +15,13 @@ export default function Home(props) {
     const [show, setShow] = useState(false);
     const [errData, seterrData] = useState("");
     const [showForm, setshowForm] = useState(props.showForm);
+    const [showButton, setShowButton] = useState(false);
 
     const onClickButton = (event) =>{
         event.preventDefault();
-
+        setShowButton(true);
         createQR();
+        
         
         // custom form handling here
       }
@@ -38,9 +41,11 @@ export default function Home(props) {
             seterrData("Your url is "+res.data.dynamicurl);
             setshowForm(false);
             setUrlValue("");
+            setShowButton(false);
           }).catch((err) =>{
             seterrData(err.response.data.error);
             setShow(true);
+            setShowButton(false);
 
           });
       }
@@ -48,7 +53,7 @@ export default function Home(props) {
   return (
     <>
     <br />
-    
+   
     { showForm && ( <div>
       <Alert variant='danger' show={ show } >{errData}</Alert>
     <Form>
@@ -59,8 +64,8 @@ export default function Home(props) {
         type="url" placeholder="Enter url" />
 
   </Form.Group>
-    <Button variant="primary" type="submit"  onClick={onClickButton}>
-      Submit
+    <Button  disabled={showButton} variant="primary" type="submit"  onClick={onClickButton}>
+      Generate QR
     </Button>
       </Form>
       </div>
@@ -77,8 +82,6 @@ export default function Home(props) {
  
  </div>
  )}
-
-
 
     </>
   )

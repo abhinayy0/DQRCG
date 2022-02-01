@@ -15,6 +15,10 @@ URLS_LIST ={}
 def index():
     return app.send_static_file('index.html')
 
+@app.route('/api')
+def home():
+    return {"message":"DQRCG API"}
+
 @app.get("/route/<path:prefix>")
 def prefix_reroute(prefix):
     url = URLS_LIST.get(prefix, None)
@@ -49,5 +53,3 @@ def generate_qr_code():
 def send_qr_image(path):
     return send_from_directory(app.config["QR_FOLDER"],path)
 
-if __name__ == "__main__":
-    app.run(debug = app.config["DEBUG"])

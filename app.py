@@ -15,8 +15,12 @@ URLS_LIST ={}
 def index():
     return {"message":"DQRCG API"}
 
-@app.route('/api')
+@app.route('/api/')
 def home():
+    return {"message":"DQRCG API"}
+
+@app.route('/api')
+def homepage():
     return {"message":"DQRCG API"}
 
 @app.get("/route/<path:prefix>")

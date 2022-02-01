@@ -1,3 +1,5 @@
 flask
 qrcode[pil]
 requests
+flask-cors
+gunicorn

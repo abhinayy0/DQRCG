@@ -1,13 +1,23 @@
-# DQRCG
-
-Dynamic QR Code Generator
+<p align="center">
+  <p align="center">
+    <a href="https://abhinayy0.github.io/DQRCG/" target="_blank">
+          <img src="./dqrcg/client/public/apple-touch-icon.png" alt="DQRCG" height="72">
+    </a>
+  </p>
+  <p align="center">
+    Dynamic QR Code Generator
+  </p>
+</p>
 
 ## About the project
 
 DQRCG let's you generate dynamic qr code's for your website urls without any hassle. You can create dynamic urls and change your url any time you want.
 
-![Home Screen](/screenshots/homepage.png?raw=true "Home Screen")
-![Genereate Code](/screenshots/generatedqr.png?raw=true "Generated Code")
+## Deployment
+
+DQRCG's frontend is live using github-pages at [dqrcg](https://abhinayy0.github.io/DQRCG/).
+
+DQRCG's api is live using Heroku at [dqrcg](https://dqrcg.herokuapp.com).
 
 ### Built With
 
@@ -44,13 +54,14 @@ Setting up the server locally.
    source venv/bin/activate
    ```
 3. Activate the virtual environment if you're using it. Install requirements
+
    ```sh
    pip install -r requirements.txt
    ```
 
 4. Make sure you're in the same working directory as your run.sh before executing the command.
 
-5. For (Linux/ Mac OS) launch using 
+5. For (Linux/ Mac OS) launch using
    ```sh
    ./run.sh
    ```
@@ -58,10 +69,18 @@ Setting up the server locally.
    ```
    ./run.bat
    ```
-6. Now your app should be accessible at 
+6. Now your api should be accessible at
+
    ```
    http://127.0.0.1:5000
    ```
+
+7. For setting up the frontend got to the [client](./dqrcg/client/) folder. Run
+   the npm install command to create the node_modules of react app. More info about
+   running react project can be found at this [link](https://github.com/facebook/create-react-app).
+
+8. Adjust the backend api config.BASE_URL in [config.js](./dqrcg/client/src/config.js) to point
+   to your flask backend. Your project should now be working.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -69,9 +88,12 @@ Setting up the server locally.
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Below you can see the application home page asking for a url field to generate qr code.
+After providing the url you will get your generated qrcode.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+![Home Screen](/screenshots/homepage.png?raw=true "Home Screen")
+![Genereated Code](/screenshots/generatedqr.png?raw=true "Generated Code")
+![Validation Error](/screenshots/error.png?raw=true "Validation Error")
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

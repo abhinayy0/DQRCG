@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/DQRCG/static/js/main.afcaf8f6.js",
+    "main.js": "/DQRCG/static/js/main.5803b3cd.js",
     "static/js/787.c4e7f8f9.chunk.js": "/DQRCG/static/js/787.c4e7f8f9.chunk.js",
     "static/media/loading.gif": "/DQRCG/static/media/loading.336e2b70aa6aca5c9990.gif",
     "index.html": "/DQRCG/index.html",
-    "main.afcaf8f6.js.map": "/DQRCG/static/js/main.afcaf8f6.js.map",
+    "main.5803b3cd.js.map": "/DQRCG/static/js/main.5803b3cd.js.map",
     "787.c4e7f8f9.chunk.js.map": "/DQRCG/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.afcaf8f6.js"
+    "static/js/main.5803b3cd.js"
   ]
 }

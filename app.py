@@ -13,7 +13,7 @@ URLS_LIST ={}
 
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')
+    return {"message":"DQRCG API"}
 
 @app.route('/api')
 def home():

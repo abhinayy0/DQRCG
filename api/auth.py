@@ -14,7 +14,7 @@ def get_google_provider_cfg():
 
     return requests.get(current_app.config["GOOGLE_DISCOVERY_URL"]).json()
 
-@auth_bp.route("/login", methods=["GET", "POST"])
+@auth_bp.route("/api/login", methods=["GET", "POST"])
 def login():
     client = WebApplicationClient(current_app.config["GOOGLE_CLIENT_ID"])
     google_provider_cfg = get_google_provider_cfg()
@@ -29,7 +29,7 @@ def login():
     print(request_uri)
     return redirect(request_uri)
 
-@auth_bp.route("/login/callback",methods=["GET", "POST"])
+@auth_bp.route("/api/login/callback",methods=["GET", "POST"])
 def callback():
     client = WebApplicationClient(current_app.config["GOOGLE_CLIENT_ID"])
     code = request.args.get("code")

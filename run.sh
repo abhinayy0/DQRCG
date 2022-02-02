@@ -1,3 +1,3 @@
-export FLASK_APP=app.py
+export FLASK_APP=api/app.py
 export FLASK_DEBUG=True
-flask run
+flask run --cert=adhoc

@@ -1,13 +1,15 @@
 from flask import Flask, request, send_from_directory, redirect
-from config import Config
-from utils import generate_qrcode
+from api.config import Config
+from api.utils import generate_qrcode
 import uuid, os, requests
 from requests.exceptions import ConnectionError
 from flask_cors import CORS
+from api.auth import auth_bp
 
-app = Flask(__name__, static_folder='dqrcg/client/build', static_url_path='/')
+app = Flask(__name__)
 CORS(app)
 app.config.from_object(Config)
+app.register_blueprint(auth_bp)
 
 URLS_LIST ={}
 
@@ -56,4 +58,3 @@ def generate_qr_code():
 @app.route('/api/<path:path>')
 def send_qr_image(path):
     return send_from_directory(app.config["QR_FOLDER"],path)
-

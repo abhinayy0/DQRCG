@@ -29,16 +29,7 @@ DQRCG's api is live using Heroku at [dqrcg](https://dqrcg.herokuapp.com).
 
 ## Getting Started
 
-Launch the app and go to the server and just start using.
-
-### Prerequisites
-
-Install your dependencies using pip.
-
-- pip
-  ```sh
-  pip install -r requirements.txt
-  ```
+Launch the app and go to the server and just start using it.
 
 ### Installation
 
@@ -51,11 +42,11 @@ Setting up the server locally.
 2. Create a virtualenv.
    ```sh
    python3 -m venv venv
-   source venv/bin/activate
    ```
-3. Activate the virtual environment if you're using it. Install requirements
+3. Activate the virtual environment. Install requirements
 
    ```sh
+   source venv/bin/activate
    pip install -r requirements.txt
    ```
 

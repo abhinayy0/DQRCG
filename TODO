@@ -5,3 +5,4 @@ print(request.host_url)
 Fix storage and urlbuilding logic
 
 Update readme
+fix auth app client

@@ -3,3 +3,5 @@ qrcode[pil]
 requests
 flask-cors
 gunicorn
+oauthlib[signedtoken]
+pyOpenSSL

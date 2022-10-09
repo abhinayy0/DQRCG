@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage": "https://abhinayy0.github.io/DQRCG",
+  "homepage": "http://127.0.0.1:5000/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -6,22 +6,19 @@ from requests.exceptions import ConnectionError
 from flask_cors import CORS
 from api.auth import auth_bp
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="build", static_url_path="/")
 CORS(app)
 app.config.from_object(Config)
 app.register_blueprint(auth_bp)
 
 URLS_LIST ={}
 
-@app.route('/')
+
+@app.route("/")
 def index():
-    return {"message":"DQRCG API"}
+    return app.send_static_file("index.html")
 
 @app.route('/api/')
-def home():
-    return {"message":"DQRCG API"}
-
-@app.route('/api')
 def homepage():
     return {"message":"DQRCG API"}
 

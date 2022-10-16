@@ -6,3 +6,8 @@ Fix storage and urlbuilding logic
 
 Update readme
 fix auth app client
+
+1. Refactor servivces_manager to update venv instead of hardcoding instead
+2. add command to build venv
+3. Fix support for windows
+4. Add service_manager as command

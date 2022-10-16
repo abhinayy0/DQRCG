@@ -13,12 +13,6 @@
 
 DQRCG let's you generate dynamic qr code's for your website urls without any hassle. You can create dynamic urls and change your url any time you want.
 
-## Deployment
-
-DQRCG's frontend is live using github-pages at [dqrcg](https://abhinayy0.github.io/DQRCG/).
-
-DQRCG's api is live using Heroku at [dqrcg](https://dqrcg.herokuapp.com).
-
 ### Built With
 
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/)
@@ -62,14 +56,22 @@ Setting up the server locally.
 4. Make sure you're in the same working directory as your run.sh before executing the command.
 
 5. For (Linux/ Mac OS) launch using
+
    ```sh
-   ./run.sh
+   python3 services_manager build
    ```
+
+   ```sh
+   python3 services_manager run-server
+   ```
+
    For windows launch using
+
    ```
    ./run.bat
    ```
-6. Now your api should be accessible at
+
+6. Now your app should be accessible at
 
    ```
    http://127.0.0.1:5000

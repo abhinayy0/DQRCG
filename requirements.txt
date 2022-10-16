@@ -5,3 +5,4 @@ flask-cors
 gunicorn
 oauthlib[signedtoken]
 pyOpenSSL
+click
